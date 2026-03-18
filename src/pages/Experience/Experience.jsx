@@ -1,5 +1,5 @@
 import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { BookOpen, Award, Trophy } from "lucide-react";
 
 const ExperienceCard = ({
   title,
@@ -8,18 +8,18 @@ const ExperienceCard = ({
   description,
   icon: Icon,
 }) => (
-  <div className="group relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+  <div className="experience-card group relative overflow-hidden transform transition-all duration-300">
     {/* Glass morphism effect */}
     <div className="absolute inset-0 backdrop-blur-lg bg-white/5 rounded-lg" />
 
     {/* Animated gradient border */}
-    <div className="absolute -inset-[2px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-lg opacity-0 group-hover:opacity-100 animate-gradient-xy transition-all duration-500" />
+    <div className="experience-card-border absolute -inset-[2px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-lg opacity-0 animate-gradient-xy transition-all duration-500" />
 
     <div className="relative bg-gray-900/90 rounded-lg p-8 h-full border border-gray-800/50 shadow-xl backdrop-blur-xl">
       {/* Floating icon with pulse effect */}
       <div className="relative mb-6">
-        <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl group-hover:opacity-75 animate-pulse transition-all duration-500" />
-        <Icon className="w-12 h-12 text-cyan-400 relative z-10 transform group-hover:rotate-12 transition-transform duration-300" />
+        <div className="experience-icon-glow absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl animate-pulse transition-all duration-500" />
+        <Icon className="experience-icon w-12 h-12 text-cyan-400 relative z-10 transform transition-transform duration-300" />
       </div>
 
       {/* Content with improved typography */}
@@ -54,28 +54,28 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
+      icon: BookOpen,
+      title: "Summer Training in DSA and C++",
+      company: "Training Program",
+      period: "Jun 2025 - Jul 2025",
       description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
+        "Completed intensive DSA and C++ training using OOP and STL. Built a menu-driven Bus Reservation System with admin/user roles, CSV persistence, modular design, and Git-based version control.",
     },
     {
-      icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
+      icon: Award,
+      title: "Professional Certifications",
+      company: "NPTEL and Oracle Cloud",
+      period: "Aug 2025 - Nov 2025",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+        "Earned NPTEL Internet of Things Certification and Oracle Cloud Infrastructure 2025 certifications, including Foundations Associate and Multicloud Architect Professional credentials.",
     },
     {
-      icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
-      period: "2023 - Present",
+      icon: Trophy,
+      title: "Competitive Coding Milestones",
+      company: "LeetCode, Codeforces, GFG",
+      period: "Aug 2025 - Nov 2025",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+        "Completed 350+ coding challenges and finished the GFG 160-Day Coding Challenge, strengthening problem-solving across data structures and algorithms.",
     },
   ];
 
@@ -83,7 +83,7 @@ const ExperienceSection = () => {
     <>
       <div className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-20">
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-[#04081A]" />
+        <div className="absolute inset-0 bg-[#111827]" />
 
         {/* Grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(50,50,70,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(50,50,70,0.15)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]" />
@@ -109,12 +109,12 @@ const ExperienceSection = () => {
           <div className="flex flex-col items-center space-y-8 mb-20">
             <div className="relative">
               <h2 className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-center">
-                Professional Journey
+                Training and Achievements
               </h2>
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
             </div>
             <p className="text-lg md:text-xl text-gray-400 font-medium tracking-wide text-center max-w-2xl">
-              "Transforming ideas into digital reality, one project at a time"
+              "Continuous learning through projects, certifications, and coding practice"
             </p>
           </div>
 

@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import EducationLoader from "@/components/ui/EducationLoader";
 import {
-  Star,
   Award,
   Calendar,
   BookOpen,
-  GraduationCap,
   Trophy,
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -15,24 +12,34 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      degree: "Bachelor of Technology - Computer Science and Engineering",
+      school: "Lovely Professional University, Phagwara, Punjab",
+      mascot: "🎓",
+      year: "Since Aug 2023",
+      achievements: ["CGPA: 7.8"],
+      skills: ["DSA", "Cloud Computing", "Web Development", "DevOps"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Pursuing core computer science coursework while building practical experience through cloud and full-stack development projects.",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      degree: "Intermediate (+2)",
+      school: "S.R.P.N H/S Bajpatti, Sitamarhi",
+      mascot: "📘",
+      year: "Apr 2021 - Mar 2022",
+      achievements: ["Percentage: 78.6"],
+      skills: ["Mathematics", "Physics", "Chemistry"],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Built a strong academic base and analytical thinking through science-oriented coursework.",
+    },
+    {
+      degree: "Matriculation",
+      school: "S.R.P.N H/S Bajpatti, Sitamarhi",
+      mascot: "📗",
+      year: "Apr 2019 - Mar 2020",
+      achievements: ["Percentage: 82.8"],
+      skills: ["Core Academics", "Discipline", "Foundational Problem Solving"],
+      description:
+        "Completed secondary education with strong fundamentals and consistent performance.",
     },
   ];
 
@@ -59,7 +66,7 @@ const EducationSection = () => {
   };
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-40 bg-[#04081A]">
+    <section className="min-h-screen relative overflow-hidden py-40 bg-[#111827]">
       {/* Grid Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
@@ -78,8 +85,8 @@ const EducationSection = () => {
             Educational Journey
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shapes innovative thinking and
-            professional growth.
+            Academic foundation that supports my growth in software engineering,
+            cloud technologies, and problem-solving.
           </p>
         </motion.div>
 
@@ -87,15 +94,15 @@ const EducationSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 gap-8"
         >
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              className={`relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
+              className={`education-card relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
                 hoveredIndex === index
-                  ? "border-teal-500 scale-[1.02]"
+                  ? "education-card-active border-teal-500"
                   : "border-blue-400/20"
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
